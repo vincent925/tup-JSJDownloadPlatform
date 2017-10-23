@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        <%= sys.title %>
+    </title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.js"></script>
+    <style>
+        .dh {
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+        <%- include('components/notification') %>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="col-sm-12 dh">广告
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="col-sm-12">
+                <div class="row-fluid">
+                    <div class="col-sm-6 dh">
+                        <form class="form" method="post" action="/signin">
+                            <div class="field required">
+                                <label>用户名</label>
+                                <input placeholder="用户名" type="text" name="name">
+                            </div>
+                            <div class="field required">
+                                <label>密码</label>
+                                <input placeholder="密码" type="password" name="password">
+                            </div>
+                            <input type="submit" class="button" value="登录">
+                        </form>
+                    </div>
+                    <div class="col-sm-6 dh">
+                        微信 / QQ
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="col-sm-12 dh">
+                        其他相关软件下载：<a href="www.chinahuben.com/z/down" target="_blank">www.chinahuben.com/z/down</a>
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="col-sm-6 dh">广告
+                    </div>
+                    <div class="col-sm-6 dh">广告
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        // 使通知框延时自动从页面删除
+        $(document).ready( function () {
+           // 延时清除掉成功、失败提示信息
+           if ($('.ui.success.message').length > 0) {
+             $('.ui.success.message').fadeOut(1000)
+           } else if ($('.ui.error.message').length > 0) {
+             $('.ui.error.message').fadeOut(1000)
+           }
+           
+           //  点击按钮弹出下拉框
+           $('.ui.dropdown').dropdown();
+           
+           // 鼠标悬浮在头像上，弹出气泡提示框
+           $('.post-content .avatar-link').popup({
+             inline: true,
+             position: 'bottom right',
+             lastResort: 'bottom right'
+           });
+         })
+       </script>
+</body>
+
+</html>
