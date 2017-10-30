@@ -5,16 +5,16 @@ var checkLogin = require('../middlewares/check').checkLogin;
 
 
 router.get('/', function (req, res, next) {
-    res.render('main');
-});
-
-router.get('/index', function (req, res, next) {
-    res.render('main2');
-});
-
-router.get('/index2',checkLogin, function (req, res, next) {
+    var code = req.session.code;
+    if(code==undefined){
+        req.flash('error', '请先登录！');
+        res.redirect('/');
+    }
+    //req.flash('success', '已登录！');
     res.render('main3');
 });
+
+
 
 
 

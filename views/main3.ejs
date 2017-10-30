@@ -1,1 +1,120 @@
-登录成功！现在可以下载了！
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <title>计算机等级考试题库软件</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <script type="text/javascript" src="/js/jquery1.42.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.SuperSlide.2.1.1.js"></script>
+    <link href="https://cdn.bootcss.com/toastr.js/latest/toastr.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/toastr.js/latest/toastr.min.js"></script>
+</head>
+<body>
+        <%- include('components/notification') %>
+    <div class="wrap">
+        <div class="head">
+            <div class="head-box fl">
+                <img src="http://www.izhixuetang.com/files/system/2016/12-23/145507b44872615541.png">
+                <span></span>
+            </div>
+            <div class="fl head-tit">计算机等级考试题库软件</div>
+        </div>
+
+        <div id="slideBox" class="slideBox">
+            <div class="hd">
+                <ul><li></li><li></li><li></li><li></li><li></li></ul>
+            </div>
+            <div class="bd">
+                <ul>
+                    <li><a href="" target="_blank"><img src="https://bookask-upload.oss-cn-beijing.aliyuncs.com/upload/101/0/40/src/40206.jpg" /></a></li>
+                    <li><a href="" target="_blank"><img src="https://bookask-upload.oss-cn-beijing.aliyuncs.com/upload/101/0/40/src/40206.jpg" /></a></li>
+                    <li><a href="" target="_blank"><img src="https://bookask-upload.oss-cn-beijing.aliyuncs.com/upload/101/0/40/src/40206.jpg" /></a></li>
+                    <li><a href="" target="_blank"><img src="https://bookask-upload.oss-cn-beijing.aliyuncs.com/upload/101/0/40/src/40206.jpg" /></a></li>
+                    <li><a href="" target="_blank"><img src="https://bookask-upload.oss-cn-beijing.aliyuncs.com/upload/101/0/40/src/40206.jpg" /></a></li>
+                </ul>
+            </div>
+            <p class="ad-text">广告</p>
+        </div>
+
+        <div class="down">
+            <h3 class="dl-tit">下载链接</h3>
+            <!-- <div class="dl-top">
+                <div class="fl">您现在的位置 -  二级MS软件下载</div>
+                <div class="fr">电脑软件，请选择较快的下载方式（ 版本是一样的 ）</div>
+                <div class="clear"></div>
+            </div> -->
+            <div class="x-line"></div>
+            <ul class="dl-list">
+                <li>
+                    <div class="list-item">
+                        <div class="list-left fl">
+                            <span>MS Office 模块</span>
+                        </div>
+                        <div class="list-right fr">
+                            <a href="" class="list-btn">立即下载</a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="x-line"></div>
+                </li>
+                <li>
+                    <div class="list-item">
+                        <div class="list-left fl">
+                            <span>C语言模块</span>
+                        </div>
+                        <div class="list-right fr">
+                            <a href="" class="list-btn">立即下载</a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="x-line"></div>
+                </li>
+            </ul>
+            <div class="dl-link">
+                <h3 class="dl-tit">
+                    <span class="fl">其他相关软件下载</span>
+                    <span class="fl">常见问题解答</span>
+                    <div class="clear"></div>
+                </h3>
+                <div class="link-box">
+                    <a target="_blank" href="" class="link-other link fl">
+                        <div class="link-item"><img src="">http://www.chinahuben.com/ms/</div>
+                    </a>
+                    <a target="_blank" href="" class="link-info link fr">
+                        <div class="link-item"><img src="">http://www.chinahuben.com/ms/</div>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+            <div class="ad-box">
+                <div target="_blank" class="ad fl">
+                    <p class="v-text"></p>
+                    <video  controls="controls" class="ad-v" src="http://resupload.xueda.com/upload/65bf664f-75a7-4093-8279-ff51446ad883/159dhUY26aFc.mp4"></video>
+                </div>
+                <a href="" target="_blank" class="ad fr">
+                    <img src="https://bookask-upload.oss-cn-beijing.aliyuncs.com/upload/101/0/40/src/40206.jpg">
+                    <p class="ad-text">广告</p>
+                </a>
+                <div class="clear"></div>
+            </div>
+
+            <div class="x-line" style="width:859px"></div>
+
+            <div class="foot">
+                Copyright © 清华大学出版社
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+<script>
+jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true,interTime:5000});
+</script>
+
+</html>

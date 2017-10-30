@@ -14,6 +14,13 @@ router.get('/', checkNotLogin, function (req, res, next) {
     res.render('signup');
 });
 
+router.get('/callback', function (req, res, next) {
+    var code = req.query.code;
+    var state = req.query.state;
+    req.session.code = code;
+    req.session.user = 1;
+    res.redirect('/main');
+});
 // POST /signup 用户注册
 router.post('/', checkNotLogin, function (req, res, next) {
     var name = req.body.name;
@@ -71,7 +78,7 @@ router.post('/', checkNotLogin, function (req, res, next) {
                     if (!error && response.statusCode == 200) {
                         //var user_json = JSON.parse(body);
                         if (user_json.code == 0) {
-                            user.ssoId=user_json.userId;
+                            user.ssoId = user_json.userId;
                             // 用户信息写入数据库
                             UserModel.create(user)
                                 .then(function (result) {

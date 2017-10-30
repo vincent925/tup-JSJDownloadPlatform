@@ -2,17 +2,39 @@
     <div class="four wide column"></div>
     <div class="eight wide column">
   
-    <% if (success) { %>
-      <div class="ui success message">
-        <p><%= success %></p>
-      </div>
-    <% } %>
+      <% if (success) { %>
+        <div id="toast-container" class="toast-top-right">
+          <div class="toast toast-success" aria-live="polite" style="display: block;">
+            <div class="toast-message">
+              <%= success %>
+            </div>
+          </div>
+        </div>
+        <% } %>
   
-    <% if (error) { %>
-      <div class="ui error message">
-        <p><%= error %></p>
-      </div>
-    <% } %>
+          <% if (error) { %>
+            <div id="toast-container" class="toast-top-right">
+              <div class="toast toast-warning" aria-live="assertive" style="display: block;">
+                <div class="toast-message">
+                  <%= error %>
+                </div>
+              </div>
+            </div>
+            <% } %>
   
     </div>
   </div>
+  <script type="text/javascript">
+    // 使通知框延时自动从页面删除
+    $(document).ready(function () {
+      toastr.options.positionClass = 'toast-top-right';
+      // 延时清除掉成功、失败提示信息
+      if ($('.toast.toast-success').length > 0) {
+        setTimeout("$('.toast.toast-success').fadeOut(1000)", 5000)
+
+      } else if ($('.toast.toast-warning').length > 0) {
+        setTimeout("$('.toast.toast-warning').fadeOut(1000)", 5000)
+      }
+
+    })
+</script>

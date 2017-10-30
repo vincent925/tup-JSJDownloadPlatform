@@ -1,6 +1,6 @@
 module.exports = function (app) {
     app.get('/', function (req, res) {
-      res.redirect('/main');
+      res.render('main2');
     });
     app.use('/signup', require('./signup'));
     app.use('/signin', require('./signin'));

@@ -1,9 +1,9 @@
 module.exports = {
-    port: 3000,
+    port: 80,
     session: {
       secret: 'JSJDownloadPlatform',
       key: 'JSJDownloadPlatform',
-      maxAge: 2592000000
+      maxAge: 60000
     },
-    mongodb: 'mongodb://192.168.0.121:27017/JSJDownloadPlatform'
+    mongodb: 'mongodb://127.0.0.1:27017/JSJDownloadPlatform'
   };
