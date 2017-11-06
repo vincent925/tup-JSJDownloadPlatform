@@ -5,5 +5,5 @@ module.exports = {
       key: 'JSJDownloadPlatform',
       maxAge: 60000
     },
-    mongodb: 'mongodb://127.0.0.1:27017/JSJDownloadPlatform'
+    mongodb: 'mongodb://10.45.137.103:27017/JSJDownloadPlatform'
   };
