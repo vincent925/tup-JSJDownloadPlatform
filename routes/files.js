@@ -28,11 +28,11 @@ router.get('/:type', function (req, res, next) {
         var privateDownloadUrl = bucketManager.privateDownloadUrl(privateBucketDomain, key, deadline);
         res.redirect(privateDownloadUrl);
     }
-    // else if(type=='cwin'){
-    //     var key='';
-    //     var privateDownloadUrl = bucketManager.privateDownloadUrl(privateBucketDomain, key, deadline);
-    //     res.redirect(privateDownloadUrl);
-    // }
+    else if(type=='cwin'){
+        var key='a410c8cf-dc62-4c6d-96b2-139b49783a77/Setup_C_4.2.4 Win 7以上.exe';
+        var privateDownloadUrl = bucketManager.privateDownloadUrl(privateBucketDomain, key, deadline);
+        res.redirect(privateDownloadUrl);
+    }
     else{
         var key='a9049b7b-dc77-497b-bfb5-263ba100af3e/Setup_C_4.2.2_xp.exe';
         var privateDownloadUrl = bucketManager.privateDownloadUrl(privateBucketDomain, key, deadline);
