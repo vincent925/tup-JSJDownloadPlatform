@@ -288,12 +288,37 @@ html,body {
     width: 50%;
     height: 100%;
 }
+.list-right2 {
+    position: relative;
+    height: 100%;
+}
 .list-btn {
 	display: inline-block;
 	width: 180px;
 	height: 42px;
 	line-height: 42px;
 	background-color: #FF001F;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 8px;
+	text-align: center;
+	margin-top: 38px;
+	float: right;
+	margin-right: 20px;
+    /*position: absolute;
+    top: 0;
+    right: 61px;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    margin-right: 0;*/
+}
+.list-btn2 {
+	display: inline-block;
+	width: 180px;
+	height: 42px;
+	line-height: 42px;
+	background-color: #00a1ff;
 	color: #fff;
 	font-size: 18px;
 	border-radius: 8px;
