@@ -270,7 +270,7 @@ html,body {
 	color: #9B9B9B;
 }
 .dl-list {
-	padding-bottom: 45px;
+	padding-bottom: 20px;
 }
 .dl-list li {
 	display: block;
@@ -323,7 +323,7 @@ html,body {
 	font-size: 18px;
 	border-radius: 8px;
 	text-align: center;
-	margin-top: 38px;
+	margin-bottom: 10px;
 	float: right;
 	margin-right: 20px;
     /*position: absolute;
