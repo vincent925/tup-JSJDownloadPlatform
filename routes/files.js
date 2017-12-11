@@ -19,22 +19,22 @@ router.get('/:type', function (req, res, next) {
     var deadline = parseInt(Date.now() / 1000) + 600; // 10分钟过期
     
     if(type=='msxp'){
-        var key='8621a932-5abb-4f29-bed4-fb02d0c7c8a8/Setup_MS_4.2.3_xp.exe';
+        var key='ab812307-e8bc-4a58-89be-fb115b5e616a/Setup_MS_4.2.4_含安装视频_Win XP.zip';
         var privateDownloadUrl = bucketManager.privateDownloadUrl(privateBucketDomain, key, deadline);
         res.redirect(privateDownloadUrl);
     }
     else if(type=='mswin'){
-        var key='477d52f8-3894-4bea-929d-82e604aa98fd/Setup_MS_4.2.4_win.exe';
+        var key='43508f3f-5223-4443-92f2-46178ffebd6b/Setup_MS_4.2.4_含安装视频_Win 7以上.zip';
         var privateDownloadUrl = bucketManager.privateDownloadUrl(privateBucketDomain, key, deadline);
         res.redirect(privateDownloadUrl);
     }
     else if(type=='cwin'){
-        var key='a410c8cf-dc62-4c6d-96b2-139b49783a77/Setup_C_4.2.4 Win 7以上.exe';
+        var key='c4c4de7b-906a-4aae-959d-bc9771b87b6e/Setup_C_4.2.4_含安装视频_Win 7以上.zip';
         var privateDownloadUrl = bucketManager.privateDownloadUrl(privateBucketDomain, key, deadline);
         res.redirect(privateDownloadUrl);
     }
     else{
-        var key='a9049b7b-dc77-497b-bfb5-263ba100af3e/Setup_C_4.2.2_xp.exe';
+        var key='be6daca5-3c6a-4431-bb07-1b3aada96a16/Setup_C_4.2.4_含安装视频_Win XP.zip';
         var privateDownloadUrl = bucketManager.privateDownloadUrl(privateBucketDomain, key, deadline);
         res.redirect(privateDownloadUrl);
     }
