@@ -19,7 +19,7 @@ router.get('/:type', function (req, res, next) {
     var deadline = parseInt(Date.now() / 1000) + 600; // 10分钟过期
     
     if(type=='msxp'){
-        var key='ab812307-e8bc-4a58-89be-fb115b5e616a/Setup_MS_4.2.4_含安装视频_Win XP.zip';
+        var key='c556f6d6-6872-4a5a-9a0d-3755bfed301c/Setup_MS_4.2.4_Win XP.exe';
         var privateDownloadUrl = bucketManager.privateDownloadUrl(privateBucketDomain, key, deadline);
         res.redirect(privateDownloadUrl);
     }
@@ -34,7 +34,7 @@ router.get('/:type', function (req, res, next) {
         res.redirect(privateDownloadUrl);
     }
     else{
-        var key='be6daca5-3c6a-4431-bb07-1b3aada96a16/Setup_C_4.2.4_含安装视频_Win XP.zip';
+        var key='e56d7766-3719-4d05-8985-3cd3ac129464/Setup_C_4.2.4 Win XP.exe';
         var privateDownloadUrl = bucketManager.privateDownloadUrl(privateBucketDomain, key, deadline);
         res.redirect(privateDownloadUrl);
     }
